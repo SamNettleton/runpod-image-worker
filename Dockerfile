@@ -1,5 +1,5 @@
-# Official RunPod PyTorch base image with CUDA support
-FROM runpod/pytorch:2.1.0-py10-cuda11.8.0-devel-ubuntu22.04
+# Official PyTorch base image with CUDA support
+FROM pytorch/pytorch:2.1.2-cuda11.8.0-cudnn8-runtime
 
 # Set non-interactive mode to prevent prompt hangups during build
 ENV DEBIAN_FRONTEND=noninteractive
@@ -13,7 +13,7 @@ WORKDIR /app
 # if handler.py is changed later.
 COPY requirements.txt .
 
-# Install Python dependencies cleanly without cache bloat
+# Install Python dependencies cleanly
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Enable high-performance Rust-based Hugging Face downloads

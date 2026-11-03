@@ -14,6 +14,7 @@ A production-grade, optimized serverless worker implementation for deploying `ru
 - `handler.py`: The core serverless worker script containing initialization logic and the request handler function.
 - `Dockerfile`: An optimized container configuration featuring layer caching (dependencies installed before code copy) and CUDA support.
 - `requirements.txt`: Pinned Python dependencies required for execution.
+- `.github/workflows/deploy.yml`: script used to build a new container image for use in Runpod when a new commit is pushed.
 
 ## API Payload Specification
 

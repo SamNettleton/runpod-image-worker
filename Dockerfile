@@ -3,6 +3,7 @@ FROM pytorch/pytorch:2.1.0-cuda11.8-cudnn8-runtime
 
 # Set non-interactive mode to prevent prompt hangups during build
 ENV DEBIAN_FRONTEND=noninteractive
+ENV PYTHONUNBUFFERED=1
 
 # Set working directory inside the container
 WORKDIR /app

@@ -1,0 +1,9 @@
+runpod
+torch
+torchvision
+transformers
+diffusers
+accelerate
+safetensors
+pillow
+hf-transfer
